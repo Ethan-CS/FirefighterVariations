@@ -14,15 +14,18 @@ public class BinaryTree {
 	            /   \
 	           4     5
 		 */
+
 		BinaryTree tree = new BinaryTree();
-		tree.root = tree.new Node(1);
-		tree.maxDegree = 3;
 
 		int numNodes = 12;
 		Node[] testNodes = new Node[numNodes];
 		for (int i = 0; i < numNodes; i++) {
-			testNodes[i] = tree.new Node(i);
+			testNodes[i] = tree.new Node(i+1);
 		}
+
+		tree.root = testNodes[0];
+		tree.maxDegree = 3;
+
 
 		try {
 			testNodes[1].add(testNodes[6].add(testNodes[9])).add(testNodes[7]);
